@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculadora.MainPage">
+
+    <StackLayout >
+        <Frame BackgroundColor="SlateGray" Padding="24" CornerRadius="0">
+            <Entry Placeholder="0" x:Name="Pantalla"
+            Keyboard="Numeric"
+            TextColor="Black" 
+            IsReadOnly="True"
+            FontSize="35"/>
+        </Frame>
+        <!--Signos-->
+        <Grid Padding="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90"></ColumnDefinition>
+                <!--Ancho del boton-->
+                <ColumnDefinition Width="90"></ColumnDefinition>
+                <!--Ancho del boton-->
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Grid.ColumnSpan="2" Grid.RowSpan="1" Margin="110,0,0,0" Text="C" Background="White" TextColor="Red" TextTransform="None" x:Name="BtnEliminar" Clicked="BotonEliminar" FontSize="40"/>
+            <Button Grid.ColumnSpan="3" Grid.RowSpan="1" Margin="210,0,0,0" Text="=" Background="White" TextColor="Green" TextTransform="None" x:Name="BtnResultado" Clicked="BotonResultado" FontSize="40"/>
+
+            <Button Grid.ColumnSpan="1" Grid.RowSpan="2" Margin="15,100,0,0" Text="+" Background="White" TextColor="Indigo" TextTransform="None" x:Name="BtnSumar" Clicked="BotonOperadores" FontSize="40"/>
+            <Button Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="110,100,0,0" Padding="0,-15,0,0" Text="-" TextColor="Indigo" Background="White" TextTransform="None" x:Name="BtnRestar" Clicked="BotonOperadores" FontSize="70"/>
+            <Button Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="210,100,10,0" Text="*"  Background="White" TextColor="Indigo" TextTransform="None" x:Name="BtnMultiplicar" Clicked="BotonOperadores" FontSize="40"/>
+            <Button Grid.ColumnSpan="4" Grid.RowSpan="2" Margin="300,100,30,0" Text="/"  Background="White" TextColor="Indigo" TextTransform="None" x:Name="BtnDividir" Clicked="BotonOperadores" FontSize="40"/>
+        </Grid>
+    <!--Numeros-->
+        <Grid Padding="0,30,0,0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"></ColumnDefinition>
+                <!--Ancho del boton-->
+                <ColumnDefinition Width="110"></ColumnDefinition>
+                <!--Ancho del boton-->
+                <ColumnDefinition Width="100"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"></RowDefinition>
+                <!--Altura del boton-->
+                <RowDefinition Height="100"></RowDefinition>
+                <!--Altura del boton-->
+                <RowDefinition Height="110"></RowDefinition>
+                <RowDefinition Height="110"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Grid.ColumnSpan="1" Margin="30,0,0,0" Text="7" Background="Purple" TextColor="GreenYellow" TextTransform="None" x:Name="Btn7" Clicked="BotonNumero" FontSize="40"/>
+            <Button Grid.ColumnSpan="2" Margin="145,0,0,0" Text="8" Background="Purple" TextColor="GreenYellow" TextTransform="None" x:Name="Btn8" Clicked="BotonNumero" FontSize="40"/>
+            <Button Grid.ColumnSpan="3" Margin="260,0,0,0" Text="9"  Background="Purple" TextColor="GreenYellow" TextTransform="None" x:Name="Btn9" Clicked="BotonNumero" FontSize="40"/>
+
+            <Button Grid.ColumnSpan="1" Grid.RowSpan="2" Margin="30,110,0,0" Text="4" Background="Purple" TextColor="GreenYellow" TextTransform="None" x:Name="Btn4" Clicked="BotonNumero" FontSize="40"/>
+            <Button Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="145,110,0,0" Text="5" Background="Purple" TextColor="GreenYellow" TextTransform="None" x:Name="Btn5" Clicked="BotonNumero" FontSize="40"/>
+            <Button Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="260,110,0,0" Text="6"  Background="Purple" TextColor="GreenYellow" TextTransform="None" x:Name="Btn6" Clicked="BotonNumero"  FontSize="40"/>
+
+            <Button Grid.ColumnSpan="1" Grid.RowSpan="3" Margin="30,220,0,0" Text="1" Background="Purple" TextColor="GreenYellow" TextTransform="None" x:Name="Btn1" Clicked="BotonNumero"  FontSize="40"/>
+            <Button Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="145,220,0,0" Text="2" Background="Purple" TextColor="GreenYellow" TextTransform="None" x:Name="Btn2" Clicked="BotonNumero"  FontSize="40"/>
+            <Button Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="260,220,0,0" Text="3"  Background="Purple" TextColor="GreenYellow" TextTransform="None" x:Name="Btn3" Clicked="BotonNumero"  FontSize="40"/>
+
+            <Button Grid.ColumnSpan="1" Grid.RowSpan="4" Margin="30,330,0,0" Text="0"  Background="Purple" TextColor="GreenYellow" TextTransform="None" x:Name="Btn0" Clicked="BotonNumero"  FontSize="40"/>
+            <Button Grid.ColumnSpan="2" Grid.RowSpan="4" Margin="145,330,0,0" Padding="0,-80,0,0" Text="."  Background="Purple" TextColor="GreenYellow" TextTransform="None" x:Name="BtnPunto" Clicked="BotonDecimal"  FontSize="120"/>
+
+        </Grid>
+        
+    </StackLayout>
+
+</ContentPage>
